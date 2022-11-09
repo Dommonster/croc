@@ -4,22 +4,22 @@ background-color: #eeeeee;
 
 #current_date_time_block2{
 	grid-area: time;
-	font-size: 100%;
+	font-size: 120%;
 	text-align: center;
 	margin-top: 10px;
 }
 
 #chel{
-	height: 50%;
-	width: 50%;
+	height: 45%;
+	width: 45%;
 	grid-area: c;
 	margin-left: auto;
     margin-right: auto
 }
 
 #minzdrav{	
-	height: 50%;
-	width: 50%;
+	height: 45%;
+	width: 45%;
 	grid-area: m;
 	margin-left: auto;
     margin-right: auto
@@ -28,14 +28,34 @@ background-color: #eeeeee;
 	font:golos text;
 	grid-area: t;
 	text-align: center;
-	grid-auto-rows: minmax
+	
+}
+h1{
+	font-size: 150%;
+}
+h2{
+	font-size: 150%;
+}
+
+#but{
+	grid-area: button;
+	background-color: #a64d79;
+	width: 500px;
+	margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px
+}
+#but:active {
+background-color: #8f4368;
+border-radius: 10px
 }
 .uper{
 
 	display: grid;
 	grid-template-areas: 
 	". . time"
-    "c t m";
+    "c t m"
+    ". button .";
     grid-row-gap: 10px;
     grid-template-columns: auto-fill, minmax(250px, 1fr);
 }
