@@ -16,7 +16,7 @@ background-color: #eeeeee;
 	width: 45%;
 	grid-area: c;
 	margin-left: auto;
-    margin-right: auto;
+    /*margin-right: auto;*/
 }
 
 #minzdrav{	
@@ -24,7 +24,7 @@ background-color: #eeeeee;
 	height: 45%;
 	width: 45%;
 	grid-area: m;
-	margin-left: auto;
+	/*margin-left: auto;*/
     margin-right: auto
 }
 .text{
@@ -71,6 +71,7 @@ border-radius: 10px
     "c t m"
     ". button .";
     grid-row-gap: 10px;
+    grid-template-rows: 50px 300px 100px ;
     grid-template-columns: /*auto-fill,*/ minmax(250px, 1fr) 1fr minmax(250px, 1fr);
 }
 
@@ -98,4 +99,8 @@ border-radius: 10px
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
+}
+
+#input{
+	margin-left: auto;
 }
