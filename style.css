@@ -4,7 +4,7 @@ background-color: #eeeeee;
 
 #current_date_time_block2{
 	display: grid;
-	grid-area: time;
+	grid-area: now;
 	font-size: 120%;
 	text-align: center;
 	margin-top: 10px;
@@ -67,7 +67,7 @@ border-radius: 10px
 
 	display: grid;
 	grid-template-areas: 
-	". . time"
+	". . now"
     "c t m"
     ". button .";
     grid-row-gap: 10px;
@@ -103,4 +103,61 @@ border-radius: 10px
 
 #input{
 	margin-left: auto;
+}
+/*------------------time-select--------------------------------------------------*/
+.now{
+	display: grid;
+	grid-area: now;
+	font-size: 120%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#head{
+	text-align: center;
+	grid-area: head;
+}
+
+#rdate{
+	grid-area: date;
+	align-items: flex-start;
+	margin-left: 30px;
+	width: 300px;
+
+}
+
+#button{
+	grid-area: btn;
+}
+
+#time{
+	grid-area: time;
+	background-color: blue;
+	border-color: blue;
+}
+
+.select{
+	display: grid;
+	grid-gap: 5px 25px;
+	grid-template-rows: 50px 50px 50px 500px 50px;
+	grid-template-areas: 
+	"now"
+	"head"
+	"date"
+	"time"
+	"btn"
+}
+@media (min-width: 640px){
+	.select{
+		grid-template-rows: 50px 50px 500px 50px;
+		grid-template-columns: 2fr 4fr;
+		grid-template-areas: 
+		"now now"
+		"head head"
+		"date time"
+		"btn ."
+	}
+	#rdate{
+		margin-left: 170px;
+	}
 }
