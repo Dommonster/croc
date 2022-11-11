@@ -1,0 +1,109 @@
+#doc{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas: 
+	"fir_doc f_f f_s f_t"
+	"sec_doc s_f s_s s_t"
+	"th_doc t_f t_s t_t"
+	"four_doc fo_f fo_s fo_t"
+	"fif_doc fi_f fi_s fi_t"
+	"six_doc si_f si_s si_t"
+}
+
+#doc div:nth-child(1){
+	grid-area: fir_doc;
+}
+
+#doc div:nth-child(2){
+	grid-area: sec_doc;
+}
+
+#doc div:nth-child(3){
+	grid-area: th_doc;
+}
+
+#doc div:nth-child(4){
+	grid-area: four_doc;
+}
+
+#doc div:nth-child(5){
+	grid-area: fif_doc;
+}	
+
+#doc div:nth-child(6){
+	grid-area: six_doc;
+}
+/*-----------------------------------*/
+#group1 input:nth-child(1){
+	grid-area: f_f;
+
+}
+
+#group1 input:nth-child(2){
+	grid-area:f_s;
+}
+
+#group1 input:nth-child(3){
+	grid-area:f_t;
+}
+/*-----------------------------------*/
+#group2 input:nth-child(1){
+	grid-area:s_f;
+}
+
+#group2 input:nth-child(2){
+	grid-area: s_s;
+}
+
+#group2 input:nth-child(3){
+	grid-area: s_t;
+}
+/*-----------------------------------*/
+#group3 input:nth-child(1){
+	grid-area: t_f;
+}
+
+#group3 input:nth-child(2){
+	grid-area: t_s;
+}
+
+#group3 input:nth-child(3){
+	grid-area: t_t;
+}
+/*-----------------------------------*/
+#group4 input:nth-child(1){
+	grid-area: fo_f;
+}
+
+#group4 input:nth-child(2){
+	grid-area: fo_s;
+}
+
+#group4 input:nth-child(3){
+	grid-area: fo_t;
+}
+/*-----------------------------------*/
+#group5 input:nth-child(1){
+	grid-area: fi_f;
+}
+
+#group5 input:nth-child(2){
+	grid-area: fi_s;
+}
+
+#group5 input:nth-child(3){
+	grid-area: fi_t;
+}
+/*-----------------------------------*/
+#group6 input:nth-child(1){
+	grid-area: si_f;
+}
+
+#group6 input:nth-child(2){
+	grid-area: si_s;
+}
+
+#group6 input:nth-child(3){
+	grid-area: si_t;
+}
+/*-----------------------------------*/

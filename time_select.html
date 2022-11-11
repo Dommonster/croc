@@ -5,6 +5,7 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
  <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" type="text/css" href="time_style.css">
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <title>Выбор времени</title>
@@ -25,25 +26,100 @@
     <button id="ok_btn" class="btn btn-online-successs" onclick="date()">Выбрать</button>
     </div>
     <div id="time" >
-      <div id="doc">
-      <div>
+      <div id="txt">
+        <h5 id="date_text" value="Выберите дату приема">Выберите дату приема</h5>
+      </div>
+      <!-- <div> -->
+
+                <style type="text/css">
+                  #doc{
+                      display: none;}
+                </style>
+      <div id ="doc">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Терапевт</th>
+                  <fieldset id="group1">
+                    <td><input type="radio" value="value1" name="group1">Время</td>
+                    <td><input type="radio" value="value3" name="group1">Время</td>
+                    <td><input type="radio" value="value2" name="group1">Время</td>
+                  </fieldset>
+                </tr>
+                <tr>
+                  <th scope="row">Окулист</th>
+                  <fieldset id="group2">
+                    <td><input type="radio" value="value1" name="group2">Время</td>
+                    <td><input type="radio" value="value3" name="group2">Время</td>
+                    <td><input type="radio" value="value2" name="group2">Время</td>
+                  </fieldset>
+                </tr>
+                <tr>
+                  <th scope="row">Невролог</th>
+                  <fieldset id="group3">
+                    <td><input type="radio" value="value1" name="group3">Время</td>
+                    <td><input type="radio" value="value3" name="group3">Время</td>
+                    <td><input type="radio" value="value2" name="group3">Время</td>
+                  </fieldset>
+                </tr>
+                <tr>
+                  <th scope="row">Лор</th>
+                  <fieldset id="group4">
+                    <td><input type="radio" value="value1" name="group4">Время</td>
+                    <td><input type="radio" value="value3" name="group4">Время</td>
+                    <td><input type="radio" value="value2" name="group4">Время</td>
+                  </fieldset>
+                </tr>
+              </tbody>
+            </table>
+      <!-- <div>
         Терапевт
       </div>
+       <fieldset id="group1">
+    <input type="radio" value="value1" name="group1">
+    <input type="radio" value="value2" name="group1">
+    <input type="radio" value="value3" name="group1">
+  </fieldset>
       <div>
         Окулист
       </div>
+       <fieldset id="group2">
+    <input type="radio" value="value1" name="group2">
+    <input type="radio" value="value2" name="group2">
+    <input type="radio" value="value3" name="group2">
+  </fieldset>
       <div>
         Кардиолог
       </div>
+      <fieldset id="group3">
+    <input type="radio" value="value1" name="group3">
+    <input type="radio" value="value2" name="group3">
+    <input type="radio" value="value3" name="group3">
+  </fieldset>
       <div>
         Хирург
       </div>
+      <fieldset id="group4">
+    <input type="radio" value="value1" name="group4">
+    <input type="radio" value="value2" name="group4">
+    <input type="radio" value="value3" name="group4">
+  </fieldset>
       <div>
         Лор
       </div>
+      <fieldset id="group5">
+    <input type="radio" value="value1" name="group5">
+    <input type="radio" value="value2" name="group5">
+    <input type="radio" value="value3" name="group5">
+  </fieldset>
       <div>
         Психиатр
       </div>
+      <fieldset id="group6">
+    <input type="radio" value="value1" name="group6">
+    <input type="radio" value="value2" name="group6">
+    <input type="radio" value="value3" name="group6">
+  </fieldset> -->
     </div>
   </div>
     <div id="zapis_btn">
@@ -53,9 +129,10 @@
   <script >
    function date(){
     let date = document.getElementById('date_picker');
-    let time = document.getElementById('doc')
+    let time = document.getElementById('doc');
     if (date_picker.value!="") {
       time.style.display='block';
+      document.getElementById('date_text').innerHTML = ('Свободное время на ' + date_picker.value);
     }
     else {alert('Выберите дату')}
   }
