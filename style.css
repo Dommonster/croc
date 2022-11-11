@@ -1,5 +1,7 @@
 body{
-background-color: #eeeeee;
+/*background-color: #eeeeee;*/
+background: url(fon.jpg) no-repeat center center fixed;
+background-size: cover;
 }
 
 #current_date_time_block2{
@@ -111,6 +113,22 @@ border-radius: 10px
 	font-size: 120%;
 	text-align: center;
 	margin-top: 10px;
+	justify-content: flex-end;
+}
+#logo{
+	margin-left: 25px;
+	display: none;
+	
+}
+
+#chel2{
+	grid-area: chell;
+	height: 80%;
+	width: 80%;
+}
+
+#chel2_label{
+	grid-area: label;
 }
 
 #head{
@@ -126,14 +144,59 @@ border-radius: 10px
 
 }
 
+.ok{
+	grid-area: ok;
+	align-items: flex-start;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#ok_btn{
+	background-color: #a64d79;
+	margin-left: 25px;
+	color: white;
+    font-size: 120%;
+    border-color: black;
+    border-style: inset;
+}
+
+#ok_btn:active{
+	background-color: #8f4368;
+}
+
+#doc{
+	display: none;
+	font-size: 30px
+}
+
 #button{
 	grid-area: btn;
+	background-color: #a64d79;
+	margin-left: 25px;
+	color: white;
+    font-size: 120%;
+    border-color: black;
+    border-style: inset;
+}
+
+#zapis_btn{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#button:active{
+	background-color: #8f4368;
 }
 
 #time{
 	grid-area: time;
-	background-color: blue;
-	border-color: blue;
+	background-color: white;
+	border-color: #a64d79;
+	border-radius: 10px;
+	border-style: groove;
+	margin-right: 5px;
+	margin-left: 5px;
+	
 }
 
 .select{
@@ -141,23 +204,36 @@ border-radius: 10px
 	grid-gap: 5px 25px;
 	grid-template-rows: 50px 50px 50px 500px 50px;
 	grid-template-areas: 
-	"now"
-	"head"
-	"date"
-	"time"
-	"btn"
+	"now now"
+	"head head"
+	"date ok"
+	"time time"
+	"btn btn"
 }
 @media (min-width: 640px){
 	.select{
-		grid-template-rows: 50px 50px 500px 50px;
-		grid-template-columns: 2fr 4fr;
+		grid-template-rows: 50px 50px 50px 350px 50px;
+		grid-template-columns: 1fr 4fr;
 		grid-template-areas: 
-		"now now"
+		"logo now"
 		"head head"
 		"date time"
-		"btn ."
+		"ok time"
+		"btn time"
+		
 	}
 	#rdate{
-		margin-left: 170px;
+		/*margin-left: 170px;*/
 	}
+	#time{
+		margin-right: 25px;
+	}
+	#logo{
+		display: grid;
+		grid-area: logo;
+		grid-template-areas: 
+		"chell label"
+
+	}
+	
 }

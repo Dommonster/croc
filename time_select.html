@@ -1,85 +1,105 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Выбор времени</title>
-  </head>
-  <body>
+<head>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Выбор времени</title>
+</head>
+<body>
 
-    <div class="select">
-      <div id="current_date_time_block2" class="now"></div>
-      <h5 id="head">Выберите время</h5>
-      <div id="rdate">
-      <input type="date" class="form-control"  required>
-      </div>
-      <div id="time">
-        <div>
-          1
-        </div>
-        <div>
-          2
-        </div>
-        <div>
-          3
-        </div>
-        <div>
-          4
-        </div>
-        <div>
-          5
-        </div>
-        <div>
-          6
-        </div>
-      </div>
-      <button id="buton">Записаться</button>
+  <div class="select">
+    <div id="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Coat_of_arms_of_Chelyabinsk_Oblast.svg" id="chel2">
+      <h5 id="chel2_label">Министерство здравоохраниения Челябинской области</h5>
     </div>
+    <div id="current_date_time_block2" class="now"></div>
+    <h5 id="head">Выберите время</h5>
+    <div id="rdate">
+      <input type="date" class="form-control" id="date_picker" required>
+    </div>
+    <div class="ok">
+    <button id="ok_btn" class="btn btn-online-successs" onclick="date()">Выбрать</button>
+    </div>
+    <div id="time" >
+      <div id="doc">
+      <div>
+        Терапевт
+      </div>
+      <div>
+        Окулист
+      </div>
+      <div>
+        Кардиолог
+      </div>
+      <div>
+        Хирург
+      </div>
+      <div>
+        Лор
+      </div>
+      <div>
+        Психиатр
+      </div>
+    </div>
+  </div>
+    <div id="zapis_btn">
+    <button id="button" class="btn btn-online-successs">Записаться</button>
 
+  </div>
+  <script >
+   function date(){
+    let date = document.getElementById('date_picker');
+    let time = document.getElementById('doc')
+    if (date_picker.value!="") {
+      time.style.display='block';
+    }
+    else {alert('Выберите дату')}
+  }
+</script>
 <script  type="text/javascript">
 
-    /* функция добавления ведущих нулей */
-    /* (если число меньше десяти, перед числом добавляем ноль) */
-    function zero_first_format(value)
+  /* функция добавления ведущих нулей */
+  /* (если число меньше десяти, перед числом добавляем ноль) */
+  function zero_first_format(value)
+  {
+    if (value < 10)
     {
-        if (value < 10)
-        {
-            value='0'+value;
-        }
-        return value;
+      value='0'+value;
     }
+    return value;
+  }
 
-    /* функция получения текущей даты и времени */
-    function date_time()
-    {
-        var current_datetime = new Date();
-        var day = zero_first_format(current_datetime.getDate());
-        var month = zero_first_format(current_datetime.getMonth()+1);
-        var year = current_datetime.getFullYear();
-        var hours = zero_first_format(current_datetime.getHours());
-        var minutes = zero_first_format(current_datetime.getMinutes());
-        var seconds = zero_first_format(current_datetime.getSeconds());
+  /* функция получения текущей даты и времени */
+  function date_time()
+  {
+    var current_datetime = new Date();
+    var day = zero_first_format(current_datetime.getDate());
+    var month = zero_first_format(current_datetime.getMonth()+1);
+    var year = current_datetime.getFullYear();
+    var hours = zero_first_format(current_datetime.getHours());
+    var minutes = zero_first_format(current_datetime.getMinutes());
+    var seconds = zero_first_format(current_datetime.getSeconds());
 
-        return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
-    }
+    return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
+  }
 
-    /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
-    document.getElementById('current_date_time_block2').innerHTML = date_time();
+  /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+  document.getElementById('current_date_time_block2').innerHTML = date_time();
 </script>
 
 
 <script type="text/javascript">
 
-    /* каждую секунду получаем текущую дату и время */
-    /* и вставляем значение в блок с id "current_date_time_block2" */
-    setInterval(function () {
-        document.getElementById('current_date_time_block2').innerHTML = date_time();
-    }, 1000);
+  /* каждую секунду получаем текущую дату и время */
+  /* и вставляем значение в блок с id "current_date_time_block2" */
+  setInterval(function () {
+    document.getElementById('current_date_time_block2').innerHTML = date_time();
+  }, 1000);
 </script>
 
-  </body>
+</body>
 </html>
