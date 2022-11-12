@@ -1,0 +1,65 @@
+#dialog_text{
+	font-size: 160%;
+	
+}
+
+body{
+/*background-color: #eeeeee;*/
+background: url(fon.jpg) no-repeat center center fixed;
+background-size: cover;
+}
+
+#chel{
+	display: grid;
+	height: 45%;
+	width: 45%;
+	grid-area: c;
+	margin-left: auto;
+    /*margin-right: auto;*/
+}
+
+#minzdrav{	
+	display: grid;
+	height: 45%;
+	width: 45%;
+	grid-area: m;
+	/*margin-left: auto;*/
+    margin-right: auto
+}
+.text{
+	display: grid;
+	font:golos text;
+	grid-area: t;
+	text-align: center;
+}
+.uper{
+
+	display: grid;
+	grid-template-areas: 
+	". . . "
+    "c t m"
+    ". pass .";
+    grid-row-gap: 10px;
+    grid-template-rows: 10px 300px 50px ;
+    grid-template-columns: /*auto-fill,*/ minmax(250px, 1fr) 1fr minmax(250px, 1fr);
+}
+
+.input{
+	margin-left: auto;
+	margin-right: auto;
+	grid-area: pass;
+}
+
+input {
+	width: 200px;
+	height: 30px;
+	align-items: center;
+}
+
+#btn{
+	background-color: #a64d79;
+}
+
+#btn:active{
+	background-color: #8f4368;
+}
