@@ -34,8 +34,8 @@ background-size: cover;
 	font:golos text;
 	grid-area: t;
 	text-align: center;
+	
 }
-
 h1{
 	font-size: 150%;
 }
@@ -242,5 +242,4 @@ border-radius: 10px
 		margin-bottom: 20px;
 	}
 }
-/*----------------------------------------------------------*/
 

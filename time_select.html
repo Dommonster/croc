@@ -41,33 +41,33 @@
                 <tr>
                   <th scope="row">Терапевт</th>
                   <fieldset id="group1">
-                    <td><input type="radio" value="value1" name="group1">Время</td>
-                    <td><input type="radio" value="value3" name="group1">Время</td>
-                    <td><input type="radio" value="value2" name="group1">Время</td>
+                    <td><input type="radio" value="value1" name="group1" ><big id="1">Время</big></td>
+                    <td><input type="radio" value="value3" name="group1" ><big id="2">Время</big></td>
+                    <td><input type="radio" value="value2" name="group1" ><big id="3">Время</big></td>
                   </fieldset>
                 </tr>
                 <tr>
                   <th scope="row">Окулист</th>
                   <fieldset id="group2">
-                    <td><input type="radio" value="value1" name="group2">Время</td>
-                    <td><input type="radio" value="value3" name="group2">Время</td>
-                    <td><input type="radio" value="value2" name="group2">Время</td>
+                    <td><input type="radio" value="value1" name="group2" ><big id="4">Время</big></td>
+                    <td><input type="radio" value="value3" name="group2" ><big id="5">Время</big></td>
+                    <td><input type="radio" value="value2" name="group2" ><big id="6">Время</big></td>
                   </fieldset>
                 </tr>
                 <tr>
                   <th scope="row">Невролог</th>
                   <fieldset id="group3">
-                    <td><input type="radio" value="value1" name="group3">Время</td>
-                    <td><input type="radio" value="value3" name="group3">Время</td>
-                    <td><input type="radio" value="value2" name="group3">Время</td>
+                    <td><input type="radio" value="value1" name="group3" ><big id="7">Время</big></td>
+                    <td><input type="radio" value="value3" name="group3" ><big id="8">Время</big></td>
+                    <td><input type="radio" value="value2" name="group3" ><big id="9">Время</big></td>
                   </fieldset>
                 </tr>
                 <tr>
                   <th scope="row">Лор</th>
                   <fieldset id="group4">
-                    <td><input type="radio" value="value1" name="group4">Время</td>
-                    <td><input type="radio" value="value3" name="group4">Время</td>
-                    <td><input type="radio" value="value2" name="group4">Время</td>
+                    <td><input type="radio" value="value1" name="group4"><big id="10">Время</big></td>
+                    <td><input type="radio" value="value3" name="group4"><big id="11">Время</big></td>
+                    <td><input type="radio" value="value2" name="group4"><big id="12">Время</big></td>
                   </fieldset>
                 </tr>
               </tbody>
@@ -127,14 +127,70 @@
 
   </div>
   <script >
-   function date(){
+   var hour = [ "8",  "9",  "10",  "11",  "12",  "13",  "14",  "15",  "16",  "17"];
+  var minut = ["00" , "15" , "30" , "45" ]
+  function date(){
+    var i=1;
+    var text="juj";
+    var costil;
+    var rand =Array(2)
+    var hour = [ 8,  9,  10,  11,  12,  13,  14,  15,  16,  17]; //массив
+    var minut = ['00' , '15' , '30' , '45' ]; //массив
     let date = document.getElementById('date_picker');
     let time = document.getElementById('doc');
     if (date_picker.value!="") {
       time.style.display='block';
       document.getElementById('date_text').innerHTML = ('Свободное время на ' + date_picker.value);
     }
-    else {alert('Выберите дату')}
+    else {alert('Выберите дату')};
+
+    for (let i = 1; i < 13; i++) {
+        console.log(i)
+        rand[0] = ~~(Math.random()*hour.length);
+        rand[1] = ~~(Math.random()*hour.length);
+        rand[2] = ~~(Math.random()*hour.length);
+        console.log(rand[0],rand[1],rand[2])
+        if (rand[0]>rand[1]) {
+          costil=rand[1]
+          rand[1]=rand[0]
+          rand[0]=costil
+        }
+        if (rand[1]>rand[2]) {
+          costil=rand[2]
+          rand[2]=rand[1]
+          rand[1]=costil
+        }
+         if (rand[0]>rand[1]) {
+          costil=rand[1]
+          rand[1]=rand[0]
+          rand[0]=costil
+        }
+        console.log(rand[0],rand[1],rand[2])
+      var rHour = hour[rand[0]];  
+        document.getElementById(i).innerHTML = (rHour);
+      var  rHour = hour[rand[1]];
+        document.getElementById(i+1).innerHTML = (rHour);
+      var rHour = hour[rand[2]];
+        document.getElementById(i+2).innerHTML = (rHour);
+
+      var randMinut = ~~(Math.random()*minut.length);
+      var rMinut = minut[randMinut];
+      text=document.getElementById(i).innerHTML
+      document.getElementById(i).innerHTML = (" "+text + ":" + rMinut);
+
+      var randMinut = ~~(Math.random()*minut.length);
+      var rMinut = minut[randMinut];
+      text=document.getElementById(i+1).innerHTML
+      document.getElementById(i+1).innerHTML = (" "+text + ":" + rMinut);
+
+      var randMinut = ~~(Math.random()*minut.length);
+      var rMinut = minut[randMinut];
+      text=document.getElementById(i+2).innerHTML
+        document.getElementById(i+2).innerHTML = (" "+text + ":" + rMinut);
+        console.log(i)
+        i=i+2;
+      }
+      
   }
 </script>
 <script  type="text/javascript">
