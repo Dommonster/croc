@@ -19,7 +19,7 @@
    <title>Главный экран</title>
 </head>
 <link rel="stylesheet" type="text/css" href="style.css"> 
-<link rel="stylesheet" type="text/css" href="script.js" >
+<!-- <link rel="stylesheet" type="text/css" href="script.js" > -->
 <body>
 
     <script src="script.js"></script>
@@ -28,13 +28,17 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Coat_of_arms_of_Chelyabinsk_Oblast.svg" id="chel2">
         <h5 id="chel2_label">Министерство здравоохраниения Челябинской области</h5>
       </div>
-        <div id="current_date_time_block2"></div>
+        <div id="current_date_time_block2" class="now"></div>
         <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Coat_of_arms_of_Chelyabinsk_Oblast.svg" id="chel">
         <div class="text">
             <h1>Областная клиническая больница №3 Государственное автономное учреждение здравоохранения</h1>
         </div>
         <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Emblem_of_Ministry_of_Health_of_Russia.svg" id="minzdrav">
+        <div id="button_block" style="margin-left: 65px">
         <button id="but" class="btn btn-online-success" data-toggle="modal" data-target="#exampleModal">Записаться на прием</button>
+        <button id="but2" class="btn btn-online-success" data-target="#exampleModal">Взять талон в регистратуру</button>
+        <button id="but3" class="btn btn-online-success"  data-target="#exampleModal">Отсканировать QR код</button>
+        </div>
     </div>
 
     <div id="exampleModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -88,6 +92,7 @@
 
     /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
     document.getElementById('current_date_time_block2').innerHTML = date_time();
+    console.log(date_time());
 </script>
 
 
@@ -97,7 +102,8 @@
     /* и вставляем значение в блок с id "current_date_time_block2" */
     setInterval(function () {
         document.getElementById('current_date_time_block2').innerHTML = date_time();
-    }, 1000);
+    console.log(date_time());}, 1000);
+
 </script>
 </body>
 </html>
