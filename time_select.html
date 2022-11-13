@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="ru">
 <head>
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
  <link rel="stylesheet" type="text/css" href="style.css">
  <link rel="stylesheet" type="text/css" href="time_style.css">
  <meta charset="utf-8">
@@ -37,98 +39,108 @@
                 </style>
       <div id ="doc">
             <table class="table">
-              <tbody>
+              <tbody id="body">
                 <tr>
                   <th scope="row">Терапевт</th>
                   <fieldset id="group1">
-                    <td><input type="radio" value="value1" name="group1" ><big id="1">Время</big></td>
-                    <td><input type="radio" value="value3" name="group1" ><big id="2">Время</big></td>
-                    <td><input type="radio" value="value2" name="group1" ><big id="3">Время</big></td>
+                    <td><input type="radio" value="value1" name="group1" id="21"><big id="1">Время</big></td>
+                    <td><input type="radio" value="value3" name="group1" id="22"><big id="2">Время</big></td>
+                    <td><input type="radio" value="value2" name="group1" id="23"><big id="3">Время</big></td>
                   </fieldset>
                 </tr>
                 <tr>
                   <th scope="row">Окулист</th>
                   <fieldset id="group2">
-                    <td><input type="radio" value="value1" name="group2" ><big id="4">Время</big></td>
-                    <td><input type="radio" value="value3" name="group2" ><big id="5">Время</big></td>
-                    <td><input type="radio" value="value2" name="group2" ><big id="6">Время</big></td>
+                    <td><input type="radio" value="value1" name="group2" id="24"><big id="4">Время</big></td>
+                    <td><input type="radio" value="value3" name="group2" id="25"><big id="5">Время</big></td>
+                    <td><input type="radio" value="value2" name="group2" id="26"><big id="6">Время</big></td>
                   </fieldset>
                 </tr>
                 <tr>
                   <th scope="row">Невролог</th>
                   <fieldset id="group3">
-                    <td><input type="radio" value="value1" name="group3" ><big id="7">Время</big></td>
-                    <td><input type="radio" value="value3" name="group3" ><big id="8">Время</big></td>
-                    <td><input type="radio" value="value2" name="group3" ><big id="9">Время</big></td>
+                    <td><input type="radio" value="value1" name="group3" id="27"><big id="7">Время</big></td>
+                    <td><input type="radio" value="value3" name="group3" id="28"><big id="8">Время</big></td>
+                    <td><input type="radio" value="value2" name="group3" id="29"><big id="9">Время</big></td>
                   </fieldset>
                 </tr>
                 <tr>
                   <th scope="row">Лор</th>
                   <fieldset id="group4">
-                    <td><input type="radio" value="value1" name="group4"><big id="10">Время</big></td>
-                    <td><input type="radio" value="value3" name="group4"><big id="11">Время</big></td>
-                    <td><input type="radio" value="value2" name="group4"><big id="12">Время</big></td>
+                    <td><input type="radio" value="value1" name="group4" id="30"><big id="10">Время</big></td>
+                    <td><input type="radio" value="value3" name="group4" id="31"><big id="11">Время</big></td>
+                    <td><input type="radio" value="value2" name="group4" id="32"><big id="12">Время</big></td>
                   </fieldset>
                 </tr>
               </tbody>
             </table>
-      <!-- <div>
-        Терапевт
-      </div>
-       <fieldset id="group1">
-    <input type="radio" value="value1" name="group1">
-    <input type="radio" value="value2" name="group1">
-    <input type="radio" value="value3" name="group1">
-  </fieldset>
-      <div>
-        Окулист
-      </div>
-       <fieldset id="group2">
-    <input type="radio" value="value1" name="group2">
-    <input type="radio" value="value2" name="group2">
-    <input type="radio" value="value3" name="group2">
-  </fieldset>
-      <div>
-        Кардиолог
-      </div>
-      <fieldset id="group3">
-    <input type="radio" value="value1" name="group3">
-    <input type="radio" value="value2" name="group3">
-    <input type="radio" value="value3" name="group3">
-  </fieldset>
-      <div>
-        Хирург
-      </div>
-      <fieldset id="group4">
-    <input type="radio" value="value1" name="group4">
-    <input type="radio" value="value2" name="group4">
-    <input type="radio" value="value3" name="group4">
-  </fieldset>
-      <div>
-        Лор
-      </div>
-      <fieldset id="group5">
-    <input type="radio" value="value1" name="group5">
-    <input type="radio" value="value2" name="group5">
-    <input type="radio" value="value3" name="group5">
-  </fieldset>
-      <div>
-        Психиатр
-      </div>
-      <fieldset id="group6">
-    <input type="radio" value="value1" name="group6">
-    <input type="radio" value="value2" name="group6">
-    <input type="radio" value="value3" name="group6">
-  </fieldset> -->
+
+
+
+
+
+
     </div>
   </div>
     <div id="zapis_btn">
-    <button id="button" class="btn btn-online-successs">Записаться</button>
+    <button id="button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" onclick="chek()">Записаться</button>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left: auto; margin-right: auto;">Талон на мед. осмотр</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: red; opacity: 0;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table>
+          <tr>
+            <th scope="row" >Терапевт</th>
+                  <fieldset id="group4">
+                    <td><big id="100" ></big></td>
+                    <td><big id="41" value="1">Время не выбрано</big></td>
+                  </fieldset>
+          </tr>
+          <tr>
+            <th scope="row" >Окулист</th>
+                  <fieldset id="group4">
+                    <td><big id="100" ></big></td>
+                    <td><big id="42" value="1">Время не выбрано</big></td>
+                  </fieldset>
+          </tr>
+          <tr>
+            <th scope="row" >Невролог</th>
+                  <fieldset id="group4">
+                    <td><big id="100" ></big></td>
+                    <td><big id="43" value="1">Время не выбрано</big></td>
+                  </fieldset>
+          </tr>
+          <tr>
+            <th scope="row" >Лор</th>
+                  <fieldset id="group4">
+                    <td><big id="100" ></big></td>
+                    <td><big id="44" value="1">Время не выбрано</big></td>
+                  </fieldset>
+            
+          </tr>
+          <tr>
+            <td style="color: white">Лор</td>
+            <td style="color: white">Не выбрано</td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer" style="margin-left: auto; margin-right: auto;">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Изменить</button>
+        <button type="button" class="btn btn-primary" id="talon">Распечатать талон</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   </div>
   <script >
-   var hour = [ "8",  "9",  "10",  "11",  "12",  "13",  "14",  "15",  "16",  "17"];
-  var minut = ["00" , "15" , "30" , "45" ]
   function date(){
     var i=1;
     var text="juj";
@@ -177,21 +189,51 @@
       var rMinut = minut[randMinut];
       text=document.getElementById(i).innerHTML
       document.getElementById(i).innerHTML = (" "+text + ":" + rMinut);
+      document.getElementById(i+20).value = (" "+text + ":" + rMinut);
+      console.log(document.getElementById(i).value);
+
 
       var randMinut = ~~(Math.random()*minut.length);
       var rMinut = minut[randMinut];
       text=document.getElementById(i+1).innerHTML
       document.getElementById(i+1).innerHTML = (" "+text + ":" + rMinut);
+      document.getElementById(i+21).value = (" "+text + ":" + rMinut);
+      console.log(document.getElementById(i+1).value);
 
       var randMinut = ~~(Math.random()*minut.length);
       var rMinut = minut[randMinut];
       text=document.getElementById(i+2).innerHTML
-        document.getElementById(i+2).innerHTML = (" "+text + ":" + rMinut);
+      document.getElementById(i+2).innerHTML = (" "+text + ":" + rMinut);
+      document.getElementById(i+22).value = (" "+text + ":" + rMinut);
+      console.log(document.getElementById(i+2).value);
         console.log(i)
         i=i+2;
       }
       
   }
+
+  function chek(){
+    let y=41;
+    for (var j=21; j<33;j++) 
+    {
+      
+      if (document.getElementById(j).checked) {
+        document.getElementById(y).innerHTML = document.getElementById(j).value;
+        y++;
+      }
+      
+  }
+  if (document.getElementById('41').innerHTML =="Время не выбрано" || document.getElementById('42').innerHTML =="Время не выбрано" || document.getElementById('43').innerHTML =="Время не выбрано" || document.getElementById('44').innerHTML =="Время не выбрано") { alert("Вы не выбрали время для всех врачей");
+      document.getElementById('talon').disabled=true;
+
+      }
+  
+      else {
+      
+      
+    }
+}
+  
 </script>
 <script  type="text/javascript">
 
@@ -219,6 +261,17 @@
 
     return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
   }
+
+
+function test(){
+  let j=21;
+  let y=41;
+  if (document.getElementById(j).checked) {
+        document.getElementById(y).innerHTML =( document.getElementById(j).value);
+        y++;
+      }
+      console.log(document.getElementById(j).value+" "+y)
+}
 
   /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
   document.getElementById('current_date_time_block2').innerHTML = date_time();
