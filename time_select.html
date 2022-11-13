@@ -15,11 +15,11 @@
 <body>
 
   <div class="select">
-    <div id="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Coat_of_arms_of_Chelyabinsk_Oblast.svg" id="chel2">
-      <h5 id="chel2_label">Министерство здравоохраниения Челябинской области</h5>
-    </div>
-    <div id="current_date_time_block2" class="now"></div>
+      <div id="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Coat_of_arms_of_Chelyabinsk_Oblast.svg" id="chel2">
+        <h5 id="chel2_label">Министерство здравоохраниения Челябинской области</h5>
+      </div>
+    <div id="current_date_time_block2" class="now" ></div>
     <h5 id="head">Выберите время</h5>
     <div id="rdate">
       <input type="date" class="form-control" id="date_picker" required>
@@ -84,62 +84,65 @@
   </div>
     <div id="zapis_btn">
     <button id="button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" onclick="chek()">Записаться</button>
-
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left: auto; margin-right: auto;">Талон на мед. осмотр</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: red; opacity: 0;">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table>
-          <tr>
-            <th scope="row" >Терапевт</th>
-                  <fieldset id="group4">
-                    <td><big id="100" ></big></td>
-                    <td><big id="41" value="1">Время не выбрано</big></td>
-                  </fieldset>
-          </tr>
-          <tr>
-            <th scope="row" >Окулист</th>
-                  <fieldset id="group4">
-                    <td><big id="100" ></big></td>
-                    <td><big id="42" value="1">Время не выбрано</big></td>
-                  </fieldset>
-          </tr>
-          <tr>
-            <th scope="row" >Невролог</th>
-                  <fieldset id="group4">
-                    <td><big id="100" ></big></td>
-                    <td><big id="43" value="1">Время не выбрано</big></td>
-                  </fieldset>
-          </tr>
-          <tr>
-            <th scope="row" >Лор</th>
-                  <fieldset id="group4">
-                    <td><big id="100" ></big></td>
-                    <td><big id="44" value="1">Время не выбрано</big></td>
-                  </fieldset>
-            
-          </tr>
-          <tr>
-            <td style="color: white">Лор</td>
-            <td style="color: white">Не выбрано</td>
-          </tr>
-        </table>
-      </div>
-      <div class="modal-footer" style="margin-left: auto; margin-right: auto;">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Изменить</button>
-        <button type="button" class="btn btn-primary" id="talon">Распечатать талон</button>
-      </div>
+  </div>
     </div>
-  </div>
-</div>
 
-  </div>
+                      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle" style="margin-left: auto; margin-right: auto;">Талон на мед. осмотр</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: red; opacity: 0;">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <table>
+                                <tr>
+                                  <th scope="row" >Терапевт</th>
+                                        <fieldset id="group4">
+                                          <td><big id="100" ></big></td>
+                                          <td><big id="41" value="1">Время не выбрано</big></td>
+                                        </fieldset>
+                                </tr>
+                                <tr>
+                                  <th scope="row" >Окулист</th>
+                                        <fieldset id="group4">
+                                          <td><big id="100" ></big></td>
+                                          <td><big id="42" value="1">Время не выбрано</big></td>
+                                        </fieldset>
+                                </tr>
+                                <tr>
+                                  <th scope="row" >Невролог</th>
+                                        <fieldset id="group4">
+                                          <td><big id="100" ></big></td>
+                                          <td><big id="43" value="1">Время не выбрано</big></td>
+                                        </fieldset>
+                                </tr>
+                                <tr>
+                                  <th scope="row" >Лор</th>
+                                        <fieldset id="group4">
+                                          <td><big id="100" ></big></td>
+                                          <td><big id="44" value="1">Время не выбрано</big></td>
+                                        </fieldset>
+                                  
+                                </tr>
+                                <tr>
+                                  <td style="color: white">Лор</td>
+                                  <td style="color: white">Не выбрано</td>
+                                </tr>
+                              </table>
+                            </div>
+                            <div class="modal-footer" style="margin-left: auto; margin-right: auto;">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Изменить</button>
+                              <button type="button" class="btn btn-primary" id="talon">Распечатать талон</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
   <script >
   function date(){
     var i=1;

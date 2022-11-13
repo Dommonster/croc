@@ -107,6 +107,9 @@ border-radius: 10px
 	margin-left: auto;
 }
 /*------------------time-select--------------------------------------------------*/
+#current_date_time_block2{
+	display: none;
+}
 .now{
 	display: grid;
 	grid-area: now;
@@ -173,13 +176,17 @@ border-radius: 10px
 }
 
 #button{
-	grid-area: btn;
+	
 	background-color: #a64d79;
 	margin-left: 25px;
 	color: white;
     font-size: 120%;
     border-color: black;
     border-style: inset;
+}
+
+#zapis_btn{
+	grid-area: btn;
 }
 
 #zapis_btn{
@@ -245,6 +252,7 @@ border-radius: 10px
 	#ok_btn{
 		margin-left: 25px;
 	}
+
 
 }
 
